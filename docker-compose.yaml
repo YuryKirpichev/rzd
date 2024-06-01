@@ -9,7 +9,7 @@ x-log: &logging
 services:
   app-compare:
     build: .
-    container_name: roc-app-compare
+    container_name: rzd-dash
     deploy:
       resources:
         limits:
