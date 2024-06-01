@@ -1,0 +1,32 @@
+version: '3.8'
+x-log: &logging
+  logging:
+    driver: "json-file"
+    options:
+      max-size: "10m"   # максимальный размер одного файла
+      max-file: "10"    # максимальное колличество файлов
+
+services:
+  app-compare:
+    build: .
+    container_name: roc-app-compare
+    deploy:
+      resources:
+        limits:
+          cpus: '0.9'
+          memory: 5G
+        reservations:
+          memory: 1024M
+    <<: *logging
+    cap_drop:
+      - NET_ADMIN
+      - SYS_ADMIN
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - ./app/app.py:/usr/src/app/app.py
+      - ./app/roc_utils:/usr/src/app/roc_utils
+      - ./app/metrics.txt:/usr/src/app/metrics.txt
+      - ./app/info_eng.txt:/usr/src/app/info_eng.txt
+      - ./app/info.txt:/usr/src/app/info.txt 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {%metas%}
+        <title>{%title%}</title>
+        {%favicon%}
+        {%css%}
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="ROC Analysis Online"">
+        <!-- Yandex.Metrika counter -->
+        
+        <!-- /Yandex.Metrika counter -->
+    </head>
+    <body>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+    </body>
+</html>

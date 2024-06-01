@@ -1,0 +1,32 @@
+Dear users,
+
+This tool has been developed by [Moscow Center Diagnostics and Telemedicine](https://tele-med.ai).
+
+With any comments and suggestions feel free to reach us by [roc-analysis@npcmr.ru]
+(mailto:roc-analysis@npcmr.ru)
+Every study in the table has each class (TP, TN, FP or FN) if approach to calculate the optimal cutoff value is selected
+You can export the resulting table clicking the
+"EXPORT" button above the table.
+                        
+You can zoom, pan and save the ROC curve by clicking onto according button. The additional information with the
+detailed information about metrics (accuracy, sensitivity, specificity, Youden index and the confusion matrics) for
+selected cut-off value if you move your cursor onto a point on a ROC curve
+
+Metrics were calculated according to [S.P. Morozov, A.V. Vladzymyrskyy, V.G. Klyashtornyy, A.E. Andreychenko,
+N.S. Kulberg, V.A. Gombolevsky, K.A. Sergunova Clinical acceptance of software based on artificial intelligence
+technologies (radiology)] (https://arxiv.org/abs/1908.00381)
+
+For two ROC curves comparison they are compared according to
+[Pauly, M., Asendorf, T., Konietschke, F., Permutation-based inference for the AUC: A unified approach for continuous and discontinuous data
+](https://pubmed.ncbi.nlm.nih.gov/27502845/)
+                        
+________________________
+                        
+This web tool calculates AUROC with confidence intervals and was based on two open Python libraries:
+                        
+1 [roc_utils](https://github.com/hirsch-lab/roc-utils) for plotting smoothed ROC-curves with confidence intervals using
+ the bootstrapping method.
+                        
+                        
+2 [roc_comparison] (https://github.com/yandexdataschool/roc_comparison) for calculating confidence intervals for AUROC with
+ [DeLong](https://doi.org/10.1109/LSP.2014.2337313) approach
