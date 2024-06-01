@@ -98,7 +98,7 @@ server = Flask(__name__)
 app = dash.Dash(__name__,
                 server=server,
                 external_stylesheets=external_stylesheets,
-                title='Прогнозирование пробега транспортных средств', )
+                title='Комплексная оценка эффективности использования автопарка', )
 
 # putting a "spell" for yandex metrics
 with open('metrics.txt') as f:
@@ -125,7 +125,7 @@ pop_up = html.Div(
                              'width': 100,
                              'padding': 4
                          }),
-                dbc.ModalHeader("ROC-Анализ диагностических тестов",
+                dbc.ModalHeader("Прогнозирование пробега транспортных средств",
                                 style={'padding': 4}, id='pop_up_title'),
                 dbc.ModalBody([
                     dcc.Markdown(info_text_rus, id='info_text')
