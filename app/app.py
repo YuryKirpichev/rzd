@@ -125,7 +125,7 @@ pop_up = html.Div(
                              'width': 100,
                              'padding': 4
                          }),
-                dbc.ModalHeader("Прогнозирование пробега транспортных средств",
+                dbc.ModalHeader("Комплексная оценка эффективности использования автопарка",
                                 style={'padding': 4}, id='pop_up_title'),
                 dbc.ModalBody([
                     dcc.Markdown(info_text_rus, id='info_text')
@@ -158,7 +158,7 @@ app.layout = html.Div([
                                 'width': 250}),]),
                 width=3
             ),
-            dbc.Col(html.Div([html.H1('Прогнозирование пробега транспортных средств')],
+            dbc.Col(html.Div([html.H1('Комплексная оценка эффективности использования автопарка')],
                              style={'textAlign': 'left', 'color': 'white'}),
                     width=5
                     ),
