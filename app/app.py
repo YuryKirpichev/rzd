@@ -373,7 +373,7 @@ def update_output(list_of_contents,
             children += [dcc.Graph(figure=fig,)]
 
         else:
-            children = [html.Span('Загрузите файл для анализа.'), ]    
+            children = [html.Span('Для рачеста и прогнозирования рейтинга загрзуите в поле выше подготовленную выгрузку из базы данных.'), ]    
 
         return children
     except Exception as e:
